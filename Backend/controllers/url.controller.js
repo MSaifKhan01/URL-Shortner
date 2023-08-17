@@ -3,8 +3,13 @@ const  UrlModel  = require("../models/url.model")
 
 async function GenrateUrl(req, res) {
     const { url } = req.body
+    
 
     try {
+        const urlPresent = await UrlModel.findOne({ redirecturl: url })
+        if(urlPresent){
+            return res.status(201).send({ msg: "url already created" })
+        }
         if (!url) {
             return res.status(209).send({ msg: "url Required" })
         }
