@@ -39,7 +39,7 @@ async function Login(req,res){
     }
     bcrypt.compare(password,isUser.password,(err,result)=>{
         if(result){
-            const token= jwt.sign({UserID:isUser._id},"Jammi",{expiresIn:"1h"})
+            const token= jwt.sign({UserID:isUser._id},"jammi",{expiresIn:"1h"})
             res.send({msg:"login succesful",token,isUser})
         }else{
             return res.send({msg:"invalid credintials"})

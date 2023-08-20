@@ -14,9 +14,21 @@ async function GenrateUrl(req, res) {
             return res.status(209).send({ msg: "url Required" })
         }
         const shortId = shortid()
-        const newUrl = new UrlModel({ shortid: shortId, redirecturl: url, visithistory: [] })
+        const currentTime = new Date();
+        const options = {
+            year: 'numeric',
+            month: 'numeric',
+            day: 'numeric',
+            hour: 'numeric',
+            minute: 'numeric',
+            second: 'numeric',
+            timeZone: 'Asia/Kolkata' // Indian time zone
+        };
+
+        const formattedTime = currentTime.toLocaleString('en-IN', options);
+        const newUrl = new UrlModel({ shortid: shortId, redirecturl: url, visithistory: [],createdAtURL: formattedTime})
         await newUrl.save()
-        return res.status(200).send({ msg: "Shorturl created", url:newUrl.shortid })
+        return res.status(200).send({ msg: "Shorturl created", url:newUrl.shortid,newUrl })
     } catch (error) {
         console.log(error)
         return res.status(401).send({ msg: error.message })

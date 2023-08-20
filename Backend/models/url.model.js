@@ -3,7 +3,7 @@ const mongoose=require("mongoose")
 const urlSchema=mongoose.Schema({
     shortid:{type:String,unique:true},
     redirecturl:String,
-    // visithistory:Array
+    createdAtURL:String,
     visithistory:[{
         timestamp:{type:Number}
     }]
