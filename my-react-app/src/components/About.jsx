@@ -1,24 +1,26 @@
 import React from "react";
 
+
 function About() {
   return (
-    <div className="container2">
+    <div className="about-container">
       <h1 className="about-title">About Our URL Shortener</h1>
       <p className="about-description">
-        Our URL shortening service is designed to make your long, complex URLs
-        shorter and more manageable. Whether you're sharing links on social
-        media, in emails, or anywhere else, our tool can help streamline your
-        URLs.
+        Welcome to our URL shortening service! We are here to make your long and
+        unwieldy URLs shorter, making them easier to manage and share. Whether
+        you're posting links on social media, sending them in emails, or using
+        them anywhere else, our tool simplifies the process.
       </p>
       <p className="about-description">
-        We take pride in providing a fast and reliable service to help you share
-        your content more efficiently. Our platform also offers analytics to
-        track the performance of your shortened links, so you can gain insights
-        into how they're being used.
+        We take great pride in delivering a speedy and dependable service that
+        helps you efficiently share your content. Our platform also provides
+        detailed analytics, allowing you to monitor the performance of your
+        shortened links and gain valuable insights into their usage.
       </p>
       <p className="about-description">
-        Thank you for choosing our URL shortener. If you have any questions or
-        feedback, please don't hesitate to contact us.
+        Thank you for choosing our URL shortener. If you have any questions,
+        suggestions, or feedback, please do not hesitate to {" Linkedin "}
+        <a href="https://www.linkedin.com/in/mohd-saif-khan-3b4979202/">contact us</a>. We're here to assist you!
       </p>
     </div>
   );
