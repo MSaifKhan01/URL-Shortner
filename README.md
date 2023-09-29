@@ -10,6 +10,15 @@ Welcome to the URL Shortener web application! This project is designed to simpli
 - **User-Friendly Interface**: A simple and intuitive interface for a seamless user experience.
 - **Responsive Design**: Ensures that the application looks great on various devices and screen sizes.
 
+- *Home Pgae
+- ![image](https://github.com/MSaifKhan01/URL-Shortner/assets/119418918/febf6d68-ebda-4585-b5a0-bf9342a9d512)
+
+
+
+  *About page
+  ![image](https://github.com/MSaifKhan01/URL-Shortner/assets/119418918/df56ebb0-86a1-4a26-b457-23c73b89131c)
+
+
 ## Technologies Used
 
 - **Frontend**: Built with React for a modern and responsive user interface.
