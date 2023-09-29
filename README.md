@@ -44,9 +44,7 @@ To run this project locally, follow these steps:
 7. Install dependencies: `npm install`
 8. Start the development server: `npm run server`
 
-## Contributions
 
-Contributions and bug reports are welcome! If you'd like to contribute to this project, please follow the [Contribution Guidelines](CONTRIBUTING.md).
 
 
 
