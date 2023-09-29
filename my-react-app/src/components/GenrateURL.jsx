@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-
 function GenerateUrl() {
   const [makeUrl, setMakeUrl] = useState("");
   const [shortUrl, setShortUrl] = useState("");
@@ -70,3 +69,5 @@ function GenerateUrl() {
 }
 
 export default GenerateUrl;
+
+

@@ -5,7 +5,7 @@ const auth = require("../middleware/auth")
 
 const UrlRouter=express.Router()
 
-UrlRouter.post("/add",auth,GenrateUrl)
+UrlRouter.post("/add",GenrateUrl)
 
 UrlRouter.get("/get/:shortId",Redirect)
 
