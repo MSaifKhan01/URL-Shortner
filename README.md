@@ -1,7 +1,7 @@
 # URL-Shortner
 
-# Frontend Deployed Link: https://url-minimizer.netlify.app/
-# Backend Deployed Link: https://url-shortener-e83c.onrender.com
+#Frontend Deployed Link: https://url-minimizer.netlify.app/
+#Backend Deployed Link: https://url-shortener-e83c.onrender.com
 
 
 Welcome to the URL Shortener web application! This project is designed to simplify the process of shortening long URLs, making them more manageable and shareable. Whether you need to share links on social media, in emails, or anywhere else, our tool streamlines the process for you.
