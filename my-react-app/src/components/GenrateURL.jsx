@@ -10,7 +10,7 @@ function GenerateUrl() {
       return;
     }
 
-    fetch(`http://localhost:3400/url/add`, {
+    fetch(`https://url-shortener-e83c.onrender.com/url/add`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -57,9 +57,11 @@ function GenerateUrl() {
             Short URL:{" "}
             <a
               className="short-url-link"
-              href={`http://localhost:3400/url/get/${shortID}`}
+              href={`https://url-shortener-e83c.onrender.com/url/get/${shortID}`}
+              target="_blank" // Open in a new tab
+              rel="noopener noreferrer" // Recommended for security
             >
-              {`http://localhost:3400/url/get/${shortID}`}
+              {`https://url-shortener-e83c.onrender.com/url/get/${shortID}`}
             </a>
           </p>
         )}
@@ -69,5 +71,3 @@ function GenerateUrl() {
 }
 
 export default GenerateUrl;
-
-
