@@ -1,6 +1,6 @@
 # URL-Shortner
 
-#Frontend Deployed Link: https://url-minimizer.netlify.app/
+#Frontend Deployed Link: https://url-minimizer02.netlify.app/
 #Backend Deployed Link: https://url-shortener-e83c.onrender.com
 
 

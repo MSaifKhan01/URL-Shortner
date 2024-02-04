@@ -4,6 +4,7 @@ function GenerateUrl() {
   const [makeUrl, setMakeUrl] = useState("");
   const [shortUrl, setShortUrl] = useState("");
   const [shortID, setShortID] = useState("");
+  const [copySuccess, setCopySuccess] = useState(false);
 
   const handleURLChange = () => {
     if (makeUrl === "") {
@@ -32,6 +33,39 @@ function GenerateUrl() {
       .catch((err) => {
         console.log(err);
       });
+  };
+
+  const CopyLinkFunc = () => {
+    // Copy short URL to clipboard
+    navigator.clipboard
+      .writeText(`https://url-shortener-e83c.onrender.com/url/get/${shortID}`)
+      .then(() => {
+        // console.log("Link copied to clipboard");
+        setCopySuccess(true);
+        setTimeout(() => {
+          setCopySuccess(false);
+        }, 5000); // Reset message after 3 seconds
+      })
+      .catch((err) => {
+        console.error("Failed to copy link: ", err);
+        alert(err);
+      });
+  };
+
+  const ShareLinkFunc = () => {
+    // Share short URL using Web Share API
+    if (navigator.share) {
+      navigator
+        .share({
+          title: "Short URL",
+          text: "Check out this short URL:",
+          url: `https://url-shortener-e83c.onrender.com/url/get/${shortID}`,
+        })
+        .then(() => console.log("Link shared successfully"))
+        .catch((error) => console.error("Error sharing link:", error));
+    } else {
+      console.log("Web Share API not supported");
+    }
   };
 
   return (
@@ -65,6 +99,19 @@ function GenerateUrl() {
             </a>
           </p>
         )}
+
+        {copySuccess && shortID && (
+          <span
+            style={{ color: "green", fontSize: "56px", fontWeight: "bold" }}
+          >
+            Link copied!
+          </span>
+        )}
+
+        <div className="copy-share-btn">
+          <button onClick={CopyLinkFunc}>Copy Link</button>
+          <button onClick={ShareLinkFunc}>Share Link</button>
+        </div>
       </div>
     </div>
   );
