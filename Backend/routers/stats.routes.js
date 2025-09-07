@@ -1,12 +1,25 @@
-const express=require("express")
-const {detailedStats} = require("../controllers/stats.controller")
-const auth = require("../middleware/auth")
+// const express=require("express")
+// const {detailedStats} = require("../controllers/stats.controller")
+// const auth = require("../middleware/auth")
 
 
-const StatsRouter=express.Router()
+// const StatsRouter=express.Router()
 
-StatsRouter.get("/detailed-stats",detailedStats)
+// StatsRouter.get("/detailed-stats",detailedStats)
 
 
 
-module.exports=StatsRouter
+// module.exports=StatsRouter
+
+
+
+
+const express = require("express");
+const { detailedStats } = require("../controllers/stats.controller");
+const auth = require("../middleware/auth");
+
+const StatsRouter = express.Router();
+
+StatsRouter.get("/detailed-stats", detailedStats);
+
+module.exports = StatsRouter;
