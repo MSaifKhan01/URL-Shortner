@@ -51,9 +51,9 @@ app.use(express.json());
 // Routes
 app.use("/user", UserRouter);
 app.use("/url", UrlRouter);
-app.use("/", StatsRouter);
+app.use("/stats", StatsRouter);
 
-// ✅ Use Render’s provided PORT (important fix)
+// ✅ Use Render’s provided PORT 
 const PORT = process.env.PORT || 3400;
 
 app.listen(PORT, async () => {

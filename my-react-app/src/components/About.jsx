@@ -217,7 +217,7 @@ function About() {
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        const response = await fetch('https://url-shortener-e83c.onrender.com/detailed-stats');
+        const response = await fetch('https://url-shortener-e83c.onrender.com/stats/detailed-stats');
         const data = await response.json();
         
         if (data.success) {
