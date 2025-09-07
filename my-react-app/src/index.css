@@ -1,3 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom animations */
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Custom animation classes */
+.animate-in {
+  animation: slideInFromBottom 0.5s ease-out;
+}
+
+.slide-in-from-bottom {
+  animation: slideInFromBottom 0.5s ease-out;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom backdrop blur for better browser support */
+.backdrop-blur-xl {
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+.backdrop-blur-lg {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.backdrop-blur-sm {
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+/* Gradient text clip support */
+.bg-clip-text {
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom loading animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Enhanced focus styles */
+.focus\:border-violet-500:focus {
+  border-color: rgb(139 92 246);
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+
+/* Custom hover effects */
+.hover\:scale-105:hover {
+  transform: scale(1.05);
+}
+
+.hover\:scale-110:hover {
+  transform: scale(1.1);
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+  transition-property: color, background-color, border-color, transform, box-shadow, opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -17,7 +114,8 @@ code {
 /* src/index.css or src/index.scss */
 
 /* navbar.css */
-.navbar {
+
+/* .navbar {
   position: sticky;
   top: 0;
   background-color: #264653;
@@ -59,7 +157,7 @@ code {
 }
 
 /* Media Queries */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
 
   .navbar {
     padding: 8px; 
@@ -68,7 +166,7 @@ code {
   .logo {
     font-size: 20px; 
   }
-}
+}  */
 
 
 
@@ -76,7 +174,7 @@ code {
 
 /* GenerateUrl.css */
 
-.wellcm{
+/* .wellcm{
   text-align: center;
   color: aquamarine;
 }
@@ -88,10 +186,9 @@ code {
   justify-content: center;
   height: 80vh;
   background-image: url("https://img.freepik.com/free-photo/close-up-glowing-neon-tube_23-2147881293.jpg?w=1060&t=st=1695969070~exp=1695969670~hmac=0726472025d0e0aa889f35fee91e16276eddb3bdbae417ee49261fef072202cd");
-  /* background-color: #f7fafc; */
+  
 }
-
-.form-container {
+ .form-container {
   width: 100%;
   max-width: 450px;
   padding: 20px;
@@ -142,11 +239,13 @@ code {
 .short-url-link {
   color: #3182ce;
   text-decoration: underline;
-}
+}  */
 
 
 
 /* About.css */
+/* 
+
 .container {
   background-color: #f8f8f8;
 padding: 30px;
@@ -190,4 +289,4 @@ padding: 30px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-}
+} */

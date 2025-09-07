@@ -3,6 +3,7 @@ const {connection} = require("./connection/db")
 const UrlRouter = require("./routers/url.routes")
 const cors=require("cors")
 const UserRouter = require("./routers/user.routes")
+const StatsRouter = require("./routers/stats.routes")
 
 
 const app=express()
@@ -13,7 +14,7 @@ app.use(express.json())
 app.use("/user",UserRouter)
 
 app.use("/url",UrlRouter)
-
+app.use("/",StatsRouter)
 
 
 app.listen(3400,async()=>{

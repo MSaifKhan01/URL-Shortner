@@ -1,23 +1,46 @@
-import React from "react";
-import {  Routes, Route } from "react-router-dom";
+// import React, { useState } from "react";
+// import { Routes, Route } from "react-router-dom";
+// import About from "./components/About";
+// import Navbar from "./components/navbar";
+// import GenerateUrl from "./components/GenerateUrl";
+// import './index.css';
+
+// function App() {
+//   const [activeTab, setActiveTab] = useState('home');
+  
+//   return (
+//     <div className="App">
+//       <Navbar activeTab={activeTab} setActiveTab={setActiveTab} />
+//       <Routes>
+//         <Route path="/" element={<GenerateUrl />} />
+//         <Route path="/about" element={<About />} />
+//       </Routes>
+//     </div>
+//   );
+// }
+
+// export default App;
 
 
+
+import React, { useState } from "react";
+import { Routes, Route } from "react-router-dom";
 import About from "./components/About";
 import Navbar from "./components/navbar";
 import GenerateUrl from "./components/GenrateURL";
+import './index.css';
 
 function App() {
-  return (
-
-      <div className="App">
-     <Navbar/>
-        <h1 className="wellcm">Welcome To URL Shortener App</h1>
-        <Routes>
-          <Route path="/" element={<GenerateUrl />} />
-          <Route path="/About" element={<About />} />
-        </Routes>
-      </div>
+  const [activeTab, setActiveTab] = useState('home');
   
+  return (
+    <div className="App">
+      <Navbar activeTab={activeTab} setActiveTab={setActiveTab} />
+      <Routes>
+        <Route path="/" element={<GenerateUrl />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </div>
   );
 }
 
